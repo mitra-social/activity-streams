@@ -9,7 +9,7 @@ namespace Mitra\ActivityStreams;
  *
  * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-video
  */
-interface VideoInterface extends Document
+interface VideoInterface extends DocumentInterface
 {
 
 }

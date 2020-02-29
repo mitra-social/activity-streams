@@ -9,7 +9,7 @@ namespace Mitra\ActivityStreams;
  *
  * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-note
  */
-interface NoteInterface extends Document
+interface NoteInterface extends DocumentInterface
 {
 
 }
