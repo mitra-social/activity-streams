@@ -1,0 +1,13 @@
+{
+    "name": "mitra/activity-streams",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1",
+        "psr/http-message": "^1.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mitra\\ActivityStreams\\": "src/"
+        }
+    }
+}
