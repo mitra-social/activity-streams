@@ -189,7 +189,7 @@ interface ObjectInterface
     /**
      * Identifies one or more links to representations of the object
      *
-     * @return array<string|LinkInterface>|null
+     * @return string|LinkInterface|array<string|LinkInterface>|null
      */
     public function getUrl();
 
@@ -227,7 +227,7 @@ interface ObjectInterface
      *
      * @return string|null
      */
-    public function getMediaType(): string;
+    public function getMediaType(): ?string;
 
     /**
      * When the object describes a time-bound resource, such as an audio or video, a meeting, etc, the duration property
