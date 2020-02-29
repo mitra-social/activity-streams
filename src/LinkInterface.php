@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Mitra\ActivityStreams;
 
-use Psr\Http\Message\UriInterface;
-
 /**
  * A Link is an indirect, qualified reference to a resource identified by a URL. The fundamental model for links is
  * established by [ RFC5988]. Many of the properties defined by the Activity Vocabulary allow values that are either
@@ -23,25 +21,25 @@ interface LinkInterface
      *
      * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id
      *
-     * @return UriInterface|null
+     * @return string|null
      */
-    public function getId(): ?UriInterface;
+    public function getId(): ?string;
 
     /**
      * Identifies the Object or Link type. Multiple values may be specified.
      *
      * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-type
      *
-     * @return UriInterface
+     * @return string
      */
-    public static function getType(): UriInterface;
+    public static function getType(): string;
 
     /**
      * The target resource pointed to by a Link.
      *
-     * @retrun UriInterface
+     * @retrun string
      */
-    public function getHref(): UriInterface;
+    public function getHref(): string;
 
     /**
      * A link relation associated with a Link. The value MUST conform to both the [HTML5] and [RFC5988] "link relation"

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Mitra\ActivityStreams;
 
-use Psr\Http\Message\UriInterface;
-
 /**
  * Describes an object of any kind. The Object type serves as the base type for most of the other kinds of objects
  * defined in the Activity Vocabulary, including other Core types such as Activity, IntransitiveActivity,
@@ -21,18 +19,18 @@ interface ObjectInterface
      *
      * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id
      *
-     * @return UriInterface|null
+     * @return string|null
      */
-    public function getId(): ?UriInterface;
+    public function getId(): ?string;
 
     /**
      * Identifies the Object or Link type. Multiple values may be specified.
      *
      * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-type
      *
-     * @return UriInterface
+     * @return string
      */
-    public static function getType(): UriInterface;
+    public static function getType(): string;
 
     /**
      * Identifies a resource attached or related to an object that potentially requires special handling. The intent is
@@ -188,7 +186,7 @@ interface ObjectInterface
     /**
      * Identifies one or more links to representations of the object
      *
-     * @return array<UriInterface|LinkInterface>
+     * @return array<string|LinkInterface>
      */
     public function getUrl();
 
