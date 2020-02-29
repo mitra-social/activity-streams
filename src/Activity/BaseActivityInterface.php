@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Mitra\ActivityStreams\Activity;
 
+use Mitra\ActivityStreams\Actor\ActorInterface;
 use Mitra\ActivityStreams\ObjectInterface;
 use Mitra\ActivityStreams\LinkInterface;
 
@@ -17,7 +18,9 @@ interface BaseActivityInterface extends ObjectInterface
      * Describes one or more entities that either performed or are expected to perform the activity. Any single activity
      * can have multiple actors. The actor MAY be specified using an indirect Link.
      *
-     * @return ObjectInterface|LinkInterface
+     * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-actor
+     *
+     * @return ActorInterface|LinkInterface|array<ActorInterface|LinkInterface>
      */
     public function getActor();
 

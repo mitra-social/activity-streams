@@ -15,15 +15,26 @@ use Psr\Http\Message\UriInterface;
  *
  * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-link
  */
-interface LinkInterface extends TypeInterface
+interface LinkInterface
 {
 
     /**
-     * An absolute IRI to identify this Link.
+     * An absolute IRI to identify this Object.
+     *
+     * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id
+     *
+     * @return UriInterface|null
+     */
+    public function getId(): ?UriInterface;
+
+    /**
+     * Identifies the Object or Link type. Multiple values may be specified.
+     *
+     * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-type
      *
      * @return UriInterface
      */
-    public function getId(): UriInterface;
+    public static function getType(): UriInterface;
 
     /**
      * The target resource pointed to by a Link.

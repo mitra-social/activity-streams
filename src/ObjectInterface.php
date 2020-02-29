@@ -13,15 +13,26 @@ use Psr\Http\Message\UriInterface;
  *
  * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object
  */
-interface ObjectInterface extends TypeInterface
+interface ObjectInterface
 {
 
     /**
      * An absolute IRI to identify this Object.
      *
+     * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id
+     *
      * @return UriInterface|null
      */
     public function getId(): ?UriInterface;
+
+    /**
+     * Identifies the Object or Link type. Multiple values may be specified.
+     *
+     * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-type
+     *
+     * @return UriInterface
+     */
+    public static function getType(): UriInterface;
 
     /**
      * Identifies a resource attached or related to an object that potentially requires special handling. The intent is
