@@ -30,16 +30,16 @@ interface LinkInterface
      *
      * @link https://www.w3.org/TR/activitystreams-vocabulary/#dfn-type
      *
-     * @return string
+     * @return string|null
      */
-    public static function getType(): string;
+    public static function getType(): ?string;
 
     /**
      * The target resource pointed to by a Link.
      *
-     * @retrun string
+     * @retrun string|null
      */
-    public function getHref(): string;
+    public function getHref(): ?string;
 
     /**
      * A link relation associated with a Link. The value MUST conform to both the [HTML5] and [RFC5988] "link relation"
@@ -48,9 +48,9 @@ interface LinkInterface
      * In the [HTML5], any string not containing the "space" U+0020, "tab" (U+0009), "LF" (U+000A), "FF" (U+000C),
      * "CR" (U+000D) or "," (U+002C) characters can be used as a valid link relation.
      *
-     * @return string|null
+     * @return string|null|array<string>
      */
-    public function getRel(): ?string;
+    public function getRel();
 
     /**
      * When used on a Link, identifies the MIME media type of the referenced resource.
@@ -58,15 +58,15 @@ interface LinkInterface
      * When used on an Object, identifies the MIME media type of the value of the content property. If not specified,
      * the content property is assumed to contain text/html content.
      *
-     * @return string
+     * @return string|null
      */
-    public function getMediaType(): string;
+    public function getMediaType(): ?string;
 
     /**
      * A simple, human-readable, plain-text name for the object. HTML markup MUST NOT be included. The name MAY be
      * expressed using multiple language-tagged values.
      *
-     * @return string|string[]
+     * @return string|array<string>
      */
     public function getName();
 
@@ -94,7 +94,7 @@ interface LinkInterface
     /**
      * Identifies an entity that provides a preview of this object.
      *
-     * @return static|ObjectInterface
+     * @return static|ObjectInterface|null
      */
     public function getPreview();
 }
