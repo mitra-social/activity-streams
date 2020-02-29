@@ -97,17 +97,17 @@ interface ObjectInterface
     public function getEndTime();
 
     /**
-     * The date and time at which the object was published
+     * Identifies the entity (e.g. an application) that generated the object.
      *
-     * @return \DateTime|null
+     * @return static|LinkInterface|null
      */
-    public function getGenerator(): ?\DateTime;
+    public function getGenerator();
 
     /**
      * Indicates an entity that describes an icon for this object. The image should have an aspect ratio of one
      * (horizontal) to one (vertical) and should be suitable for presentation at a small size.
      *
-     * @return array<ImageInterface|LinkInterface>|null
+     * @return ImageInterface|LinkInterface|array<ImageInterface|LinkInterface>|null
      */
     public function getIcon();
 
@@ -115,21 +115,21 @@ interface ObjectInterface
      * Indicates an entity that describes an image for this object. Unlike the icon property, there are no aspect ratio
      * or display size limitations assumed.
      *
-     * @return array<ImageInterface|LinkInterface>|null
+     * @return ImageInterface|LinkInterface|array<ImageInterface|LinkInterface>|null
      */
     public function getImage();
 
     /**
      * Indicates one or more entities for which this object is considered a response.
      *
-     * @return static|LinkInterface
+     * @return static|LinkInterface|array<static|LinkInterface>|null
      */
     public function getInReplyTo();
 
     /**
      * Indicates one or more physical or logical locations associated with the object.
      *
-     * @return static|LinkInterface|null
+     * @return static|LinkInterface|array<static|LinkInterface>|null
      */
     public function getLocation();
 
