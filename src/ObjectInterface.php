@@ -234,7 +234,7 @@ interface ObjectInterface
      * indicates the object's approximate duration. The value MUST be expressed as an xsd:duration as defined by
      * [ xmlschema11-2], section 3.3.6 (e.g. a period of 5 seconds is represented as "PT5S").
      *
-     * @return \DatePeriod|null
+     * @return \DateInterval|null
      */
-    public function getDuration(): ?\DatePeriod;
+    public function getDuration(): ?\DateInterval;
 }
