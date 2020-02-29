@@ -1,5 +1,5 @@
 {
-    "name": "mitra/activity-streams",
+    "name": "mitra-social/activity-streams",
     "license": "MIT",
     "require": {
         "php": ">=7.1",
