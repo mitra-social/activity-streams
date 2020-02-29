@@ -48,7 +48,7 @@ interface LinkInterface
      * In the [HTML5], any string not containing the "space" U+0020, "tab" (U+0009), "LF" (U+000A), "FF" (U+000C),
      * "CR" (U+000D) or "," (U+002C) characters can be used as a valid link relation.
      *
-     * @return string|null|array<string>
+     * @return null|array<string>
      */
     public function getRel();
 
