@@ -97,4 +97,11 @@ interface LinkInterface
      * @return static|ObjectInterface|null
      */
     public function getPreview();
+
+    /**
+     * Returns a string representation of the link (href)
+     *
+     * @return string|null
+     */
+    public function __toString();
 }
